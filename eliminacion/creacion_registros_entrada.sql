@@ -29,13 +29,13 @@ insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
 values ('014','1254546587', '09/09/2023','06:11')
 
 insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
-values ('099','1258711587', '10/08/2023','08:59')
+values ('0584','1258711587', '10/06/2023','08:59')
 
 insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
-values ('066','1258747777', '11/09/2023','16:25')
+values ('0666','1258747777', '11/06/2023','16:25')
 
 insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
-values ('019','125789587', '12/08/2023','07:55')
+values ('0197','125789587', '12/06/2023','07:55')
 
 --selects registros_entrada
 
@@ -46,3 +46,7 @@ select * from registros_entrada where hora > '8:00:00'
 --update registros_entrada
 
 update registros_entrada set cedula_empleado='082345679' where fecha  between '01/08/2023' and '31/08/2023'
+
+--delete registros_entrada
+
+delete from registros_entrada where fecha between '01/06/2023' and '30/06/2023' 	
