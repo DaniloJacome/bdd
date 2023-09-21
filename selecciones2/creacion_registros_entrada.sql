@@ -35,7 +35,7 @@ insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
 values ('0666','1258747777', '11/06/2023','16:25')
 
 insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
-values ('0197','125789587', '12/06/2023','07:55')
+values ('0199','085789587', '12/06/2023','09:55')
 
 --selects registros_entrada
 
@@ -50,3 +50,10 @@ update registros_entrada set cedula_empleado='082345679' where fecha  between '0
 --delete registros_entrada
 
 delete from registros_entrada where fecha between '01/06/2023' and '30/06/2023' 	
+
+--select2 registros_entrada
+select * from registros_entrada where (fecha between '01/09/2023' and '30/09/2023') or (cedula_empleado like '17%')
+select * from registros_entrada where (fecha between '2023/08/01' and '2023/08/31') and (cedula_empleado like '17%') 
+and (hora between '08:00:00' and '12:00:00')
+select * from registros_entrada where (fecha between '2023/08/01' and '2023/08/31') and (cedula_empleado like '17%') 
+and (hora between '08:00:00' and '12:00:00') or (cedula_empleado like '08%' and hora between '09:00:00' and '13:00:00')

@@ -7,16 +7,16 @@ create table cuentas(
 )
 
 insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
-values ('12547', '25478', '21/05/2002', 350)
+values ('12942', '25472', '21/03/2023', 0)
 
 insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
-values ('65842', '26984', '12/07/2003', 1.350)
+values ('65849', '26982', '12/02/2023', 0)
 
 insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
 values ('88888', '15265', '03/05/2002', 510)
 
 insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
-values ('18888', '10444', '13/08/2002', 888)
+values ('18897', '10442', '13/01/2022', 0)
 
 insert into cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
 values ('87854', '10778', '07/12/2010', 22500)
@@ -50,4 +50,8 @@ update cuentas set saldo=10 where cedula_propietario like '17%'
 
 delete from cuentas where cedula_propietario like '10%'
 
+-- seleccione2 cuentas
+select numero_cuenta, saldo from cuentas where saldo>'100' and saldo<'1000'
+select * from cuentas where fecha_creacion between '21/09/2022' and '21/09/2023'
+select * from cuentas where saldo='0' or cedula_propietario like '%2'
 

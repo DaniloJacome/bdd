@@ -8,10 +8,10 @@ create table estudiantes(
 )
 
 insert into estudiantes (cedula, nombre, apellido, email, fecha_nacimiento)
-values ('174785475', 'Danilo', 'Jácome', 'jacome14@gmail.com','07/12/1994')
+values ('184785475', 'Danilo', 'Jácome', 'jacome14@gmail.com','07/12/1994')
 
 insert into estudiantes (cedula, nombre, apellido, email, fecha_nacimiento)
-values ('254784475', 'Mayensi', 'Salazar', 'salazar14@gmail.com','21/05/1994')
+values ('253284475', 'Mayensi', 'Salazar', 'salazar14@gmail.com','21/05/1994')
 
 insert into estudiantes (cedula, nombre, apellido, email, fecha_nacimiento)
 values ('254788785', 'Richard', 'Jácome', 'jacome178@gmail.com','25/02/1993')
@@ -43,3 +43,9 @@ update estudiantes set apellido='Hernández' where cedula like '17%'
 -- delete estudiantes
 
 delete from estudiantes where cedula like '%05'
+
+--select2 estudiantes
+
+select nombre, apellido from estudiantes where nombre like 'M%' or apellido like '%z'
+select nombre from estudiantes where cedula like '%32%' or cedula like '18%'
+select nombre,apellido from estudiantes where cedula like '%06' or cedula like '17%'
