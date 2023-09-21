@@ -1,8 +1,9 @@
+drop table transacciones
 create table transacciones(
 	codigo int not null,
 	numero_cuenta char(5) not null,
 	monto money not null,
-	tipo char(1) not null,
+	tipo char(15) not null,
 	fecha date not null,
 	hora time not null,
 	constraint transacciones_pk primary key (codigo)
@@ -21,13 +22,13 @@ insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora)
 values ('45','24578','250','C','13/09/2023','10:22')
 
 insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora)
-values ('85','25777','15848','D','15/09/2023','08:33')
+values ('85845','25777','333','D','15/09/2023','15:33')
 
 insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora)
-values ('587','85214','888','D','18/09/2023','16:10')
+values ('5845','85214','458','D','18/09/2023','16:10')
 
 insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora)
-values ('658','29898','1250','C','19/09/2023','18:31')
+values ('701','29898','1250','C','19/09/2023','16:31')
 
 insert into transacciones (codigo, numero_cuenta, monto, tipo, fecha, hora)
 values ('854','25666','2580','C','21/09/2023','19:00')
@@ -43,3 +44,9 @@ values ('889','77778','350','D','25/09/2023','20:36')
 select * from transacciones where tipo like 'D'
 select * from transacciones where monto between '200' and '2000'
 select codigo, monto, tipo, fecha from transacciones where  fecha is not null
+
+--update transacciones
+
+update transacciones set tipo='Transferencia' where monto>'100€' and monto<'500€' and 
+fecha between '01/09/2023' and '30/09/2023' and
+hora between '14:00:00' and '20:00:00' 

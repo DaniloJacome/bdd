@@ -29,10 +29,10 @@ insert into videojuegos(codigo, nombre, valoracion)
 values ('260', 'APEX LEGENDS', 4.9)
 
 insert into videojuegos(codigo, nombre, valoracion)
-values ('261', 'CLASH ROYALE', 5.1)
+values ('171', 'CLASH OF CLANS', 10)
 
 insert into videojuegos(codigo, nombre, valoracion)
-values ('262', 'PARCHIS', 4.9)
+values ('170', 'PARCHIS OLD STAR', 10)
 
 -- selects videojuegos
 
@@ -40,5 +40,7 @@ select * from videojuegos where nombre like 'C%'
 select * from videojuegos where valoracion between '9' and '10'
 select * from videojuegos where descripcion is null
 
+--update videojuegos
 
+update videojuegos set descripcion='Mejor Puntuado' where valoracion>9
 

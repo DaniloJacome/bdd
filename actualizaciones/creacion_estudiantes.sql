@@ -32,6 +32,10 @@ insert into estudiantes (cedula, nombre, apellido, email, fecha_nacimiento)
 values ('248885475', 'Austin', 'Santos', 'santosaust@gmail.com','25/12/1985')
 
 --selects estudiantes
-select nombre, cedula from estudiantes
+select nombre, cedula, apellido from estudiantes
 select nombre from estudiantes where cedula like '17%'
 select nombre, apellido from estudiantes where nombre like 'A%'
+
+--update estudiantes
+
+update estudiantes set apellido='Hernández' where cedula like '17%'
